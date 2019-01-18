@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LinqToSQl">
+  <DataContextMoniker Name="/LinqToSQlDataContext" />
+  <nestedChildShapes>
+    <classShape Id="95e95e1a-cf50-4f44-85c3-07abed525d3f" absoluteBounds="1.25, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/LinqToSQlDataContext/Breed" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70277b85-69e8-44c4-93ec-08e4a258ddf3" absoluteBounds="1.2649999999999997, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4a23ea8-524d-4eef-9a58-3a6690230c7c" absoluteBounds="3.875, 1.25, 2, 2.5401025390625">
+      <DataClassMoniker Name="/LinqToSQlDataContext/Pet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb542c04-c27f-4ab5-bd04-e79368d3ba79" absoluteBounds="3.8899999999999997, 1.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 1.78125); (3.875 : 1.78125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSQlDataContext/Breed/Breed_Pet" />
+      <nodes>
+        <classShapeMoniker Id="95e95e1a-cf50-4f44-85c3-07abed525d3f" />
+        <classShapeMoniker Id="a4a23ea8-524d-4eef-9a58-3a6690230c7c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="41b8cdc7-7a54-46b2-b1c1-645b05a34982" absoluteBounds="4.125, 4, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/LinqToSQlDataContext/Specy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a049f3f-bde3-4b5d-8519-af35521368bf" absoluteBounds="4.14, 4.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2ffba7f2-1d43-4592-9a0c-82f6494231cf" absoluteBounds="1.625, 3.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/LinqToSQlDataContext/Vetbill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7171d11-7a76-4d16-99c8-a252b0a35136" absoluteBounds="1.6399999999999997, 4.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="mz7340g" Class="LinqToSQlDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=sql-server;Initial Catalog=mz7340g;Persist Security Info=True;User ID=mz7340g" SettingsObjectName="TaxiDriverSystem.Properties.Settings" SettingsPropertyName="mz7340gConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Breed" Member="Breeds">
+    <Type Name="Breed">
+      <Column Name="BreedID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SpeciesID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Breed" Member="Breed1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FoodCostPerKG" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="HousingCosts" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Association Name="Breed_Pet" Member="Pets" ThisKey="BreedID" OtherKey="BreedID" Type="Pet" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pet" Member="Pets">
+    <Type Name="Pet">
+      <Column Name="PetID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PetImage" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PetName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="BreedID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PetWeight" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DateWhenRescued" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AgeWhenRescued" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Breed_Pet" Member="Breed" ThisKey="BreedID" OtherKey="BreedID" Type="Breed" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Species" Member="Species">
+    <Type Name="Specy">
+      <Column Name="SpeciesID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Species" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vetbill" Member="Vetbills">
+    <Type Name="Vetbill">
+      <Column Name="VetBillID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PetID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Vaccines" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="Neutering_Procedures" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="Id_Chipping" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="Flea_Spraying" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="Worming_Pills" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
